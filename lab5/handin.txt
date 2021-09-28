@@ -1,0 +1,31 @@
+Jonathan Licht
+Lab 2301-03
+
+1) Because the VPN is 20 bits, there are 2^20 virtual pages. Additionally, there are 28 bits in the offset which means 2^28 bytes per page or 256MB pages.
+
+2) The computer has 2^34 bytes of physical memory divided by a 2^28 page frame size which is 64 physical frames. 2^32/2^28 = 2^6 = 64.
+
+3) Because each digit in hexadecimal is equivalent to 4 digits in binary we can say that the virtual address 0x00002012D687 has a VPN of 0x00002 and a OFFSET of 012D687. The VPN (2) will be arbitrarily mapped to some physical frame using a page table. A page table keeps track of all the mappings from the virtual addresses to the physical frames. This frame number obtained from the page table will then be prepended to the OFFSET. This will number will be the resulting physical memory address.
+
+4) The 3 right-most digits will be the OFFSET and the rest will be the VPN. This is because the page size is 4096 = 2^12. 3 digits in hexadecimal is 12 digits in binary.
+
+4.1) 0xB9A9 -> 0x49A9
+4.2) 0x0532 -> 0x7532
+4.3) 0x6421 -> 0x9421
+4.4) 0x1B80 -> 0xBB80
+4.5) 0xF300 -> 0x2300
+
+5) 0xC123 would result in a segmentation fault because there is no mapping at the 12th row of the page table.
+
+6) As the address space grows, the page-table size should increase. There are more addresses translations to map which the page table must keep track of.
+
+7) As the page size grows, more information can be stored in each page. This means that there are less page translations to keep track of, which means a smaller table.
+
+8) In general, using really big page sizes helps decrease the amount of translations needed however, it forces the OS to over allocate space which leads to wasted space. To be efficient in space the OS needs pages that are small and to be efficient in time it needs pages that are large.
+
+9.1) VPN is 1110. The OFFSET is 1000111001.
+9.2) VPN is 0110. The OFFSET is 0110000110.
+
+10) As you increase the percentage of pages that are allocated, the number of valid page translations increases.
+
+11) The simulation breaks in certain situations such as the physical address space being larger than the virtual address space. Additionally the virtual address space must be a multiple of the page size.

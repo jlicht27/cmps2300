@@ -1,0 +1,7 @@
+The total idle time for the week was 2800 minutes
+The performance rate over the week was 27.78%
+The average daily idle time was 400.00 minutes
+Day(s) with lowest idle time:
+Day 1
+Day(s) with highest idle time:
+Day 7

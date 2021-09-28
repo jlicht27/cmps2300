@@ -1,0 +1,42 @@
+Jonathan Licht
+Lab 8
+
+1)
+Seek: 40
+Rotate: 275
+Transfer: 60
+Total: 375
+
+2)
+Seek: 160
+Rotate: 545
+Transfer: 90
+Total: 795
+
+3) The order to minimize the total time required is 7, 8, then 30.
+
+4)
+Seek: 80
+Rotate: 205
+Transfer: 90
+Total: 375
+
+5) mkdir("/s")
+
+6) creat("/g")
+
+7) fd=open("/g", O_WRONLY|O_APPEND); write(fd, buf, BLOCKSIZE); close(fd);
+
+8)
+inode bitmap 11000000
+inodes [d a:0 r:2][f a:1 r:1][][][][][][]
+data bitmap 11000000
+data [(.,0) (..,0) (h,1)][z][][][][][][]
+
+9)
+inode bitmap 11000000
+inodes [d a:0 r:3][d a:1 r:2][][][][][][]
+data bitmap 11000000
+data [(.,0) (..,0) (t,1)][(.,1) (..,0) (e,2)][][][][][][]
+
+

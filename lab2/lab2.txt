@@ -1,0 +1,22 @@
+Jonathan Licht
+Lab 3
+
+1) Jonathans-MacBook-Pro-2:~ jlicht$
+
+2) /Users/jlicht
+
+3) Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+
+4) /Users/jlicht/Desktop/computer science/cmps2300
+
+5) mv lab2.txt cmps2300/
+
+6) The * is used as a pointer to other variables or used to dereference
+the value of the variable it is pointing to. If you create a function that
+changes the values of the arguments, you need to use a * when changing the
+value in the function. Without it, the program will create a temporary variable
+and then change the value of the temporary variable. Additionally, the & should
+be used when you want to access the memory address of a variable. When scanning
+in variables, you should tell the program "assign the value to the variable
+stored at this address."

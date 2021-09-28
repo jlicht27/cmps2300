@@ -1,0 +1,51 @@
+# Worked with Garret Gilliom for this part
+
+#!/bin/bash
+
+directoryPath=${1}
+
+cd ${directoryPath}
+
+#for each file in directory
+for file in *; do
+  name=${file}
+  numPeriods=0
+  numUnderscores=0
+
+  #for each character in name of file
+  for ((i = 0;i<${#file};i++)); do
+
+    #if it reaches first period
+    if [[ ${name:${i}:1} == '.' && ${numPeriods} == 0 ]]; then
+      let "indexP=i"
+      let "numPeriods += 1"
+    fi
+
+    #if it reaches second underscore
+    if [[ ${name:${i}:1} == '_' && ${numUnderscores} == 1 ]]; then
+      indexU2=${i}
+      let "numUnderscores += 1"
+    fi
+
+    #if it reaches first underscore
+    if [[ ${name:${i}:1} == '_' && ${numUnderscores} == 0 ]]; then
+      indexU1=${i}
+      let "numUnderscores += 1"
+    fi
+  done
+
+  let "fileTypeLength=indexU1-indexP"
+  let "indexU1++"
+  let "signatureLength=indexU2-indexU1"
+
+  fileType=${name:indexP:${fileTypeLength}}
+  signature=${name:${indexU1}:${signatureLength}}
+
+  name=${signature}${fileType}
+
+  #mv ${file} ${name} commented out to prevent accidently moving/deleting files
+  echo ${name}
+
+done
+
+exit

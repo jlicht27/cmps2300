@@ -1,0 +1,12 @@
+#!/bin/bash
+
+directoryPath=${1}
+
+cd ${directoryPath}
+for javaFile in *; do
+  if [[ ${javaFile} != *.java ]]; then
+    echo ${javaFile} #edited to echo instead of rm to prevent accidently
+  fi                 #deleting files
+done
+
+exit

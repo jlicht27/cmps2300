@@ -1,0 +1,21 @@
+Print to file
+./script1 5 10 bitwise.c exampleFolder
+Print to terminal
+10
+The second command line argument was larger
+The file was in this directory
+The folder was in this directory
+1.c
+2.c
+3.c
+
+Print to file
+./script1 10 5 hello.py exampleFolder
+Print to terminal
+5
+The first command line argument was larger
+The file was not in this directory
+The folder was in this directory
+1.c
+2.c
+3.c

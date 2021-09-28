@@ -1,0 +1,42 @@
+#!/bin/bash
+
+echo "Print to terminal"
+
+echo "Print to file" >> handin.txt
+
+num1=${1} #number
+num2=${2} #number
+fileName=${3} #file
+folderName=${4} #folder
+
+echo ${num2}
+
+#check which number is bigger
+if [[ ${num1} -gt ${num2} ]]; then
+  echo "The first command line argument was larger"
+else
+  echo "The second command line argument was larger"
+fi
+
+#check for file
+if [[ -f ${fileName} ]]; then
+  echo "The file was in this directory"
+else
+  echo "The file was not in this directory"
+fi
+
+#check for folder
+if [[ -d ${folderName} ]]; then
+  echo "The folder was in this directory"
+else
+  echo "The folder was not in this directory"
+fi
+
+#check for c files in folderName
+cd ${folderName}
+for cfile in *.c; do
+  echo ${cfile}
+done
+cd ..
+
+exit

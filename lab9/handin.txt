@@ -1,0 +1,8 @@
+Jonathan Licht
+Lab 9
+
+1) The other clients say that they have connected to the server however the server gives no update that other clients have been accepted.
+
+2) The server blocks messages from other clients from being displayed.
+
+3) Once the first client disconnects, the next client connects and displays their message. This continues for the other clients in the order they connected.
